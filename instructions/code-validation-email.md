@@ -13,7 +13,7 @@ Design 3 distinct account verification code email templates for Pampered Chef. E
 - **Approach**: Straightforward, security-focused messaging
 - **Key Elements**:
   - Clear, direct subject line: "Your verification code"
-  -   - Contextual messaging about code validity (15-minute expiration)
+  -   - Contextual messaging about code validity (30-minute expiration)
   -     - Security reassurance: "We will never call or text you to request this code"
   -       - Privacy/security information in footer
     - Instructions for account recovery if code wasn't requested
@@ -55,7 +55,7 @@ Design 3 distinct account verification code email templates for Pampered Chef. E
                                               
                                               1. **Code Prominence**: The 6-digit code should be the visual focal point—use size, color, spacing, and contrast strategically
                                               2. **Clear Purpose**: Explain why the verification is happening and what happens next
-                                              3. **Urgency + Reassurance**: Mention code expiration (typically 10-15 minutes) and include a "wasn't you?" recovery path
+                                              3. **Urgency + Reassurance**: Mention code expiration (typically 30 minutes) and include a "wasn't you?" recovery path
                                               4. **Copy Tone**: Range from minimal/direct to friendly/helpful depending on brand voice
                                               5. **Trust Elements**:
                                                  - Security messaging about never requesting code via phone/text
@@ -119,7 +119,7 @@ Design 3 distinct account verification code email templates for Pampered Chef. E
                                                                                         Use these variables for dynamic content:
                                                                                         - `{USER_NAME}` - Recipient's first name
                                                                                         - `{VERIFICATION_CODE}` - 6-digit code
-                                                                                        - `{EXPIRATION_TIME}` - Code expiration duration (e.g., "15 minutes")
+                                                                                        - `{EXPIRATION_TIME}` - Code expiration duration (e.g., "30 minutes")
                                                                                         - `{COMPANY_NAME}` - "Pampered Chef"
                                                                                         - `{SUPPORT_EMAIL}` - Support contact email
                                                                                         - `{SECURITY_POLICY_URL}` - Link to security/privacy info
