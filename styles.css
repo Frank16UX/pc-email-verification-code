@@ -1,0 +1,1098 @@
+/* ==========================================================================
+   Pampered Chef Email Templates - Stylesheet
+   Based on Pampered Chef Cookbook Design System
+   ========================================================================== */
+
+/* ==========================================================================
+   Custom Fonts
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Questa';
+  src: url('https://raw.githubusercontent.com/Frank16UX/pc-cookbook-legacy/main/assets/fonts/Questa-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Questa';
+  src: url('https://raw.githubusercontent.com/Frank16UX/pc-cookbook-legacy/main/assets/fonts/Questa-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ==========================================================================
+   Design Tokens (from Cookbook Design System)
+   ========================================================================== */
+
+:root {
+  /* Primary Colors */
+  --pc-color-primary: #1a5962;
+  --pc-color-primary-dark: #124248;
+  --pc-color-primary-light: #2d7e8b;
+
+  /* Text Colors */
+  --pc-text-primary: #2f3031;
+  --pc-text-secondary: #45474a;
+  --pc-text-tertiary: #6b6c70;
+
+  /* Surface Colors */
+  --pc-surface-light: #ffffff;
+  --pc-surface-tint: #f3f6f6;
+  --pc-surface-tint-2: #e1eef0;
+  --pc-surface-border: #d3dede;
+
+  /* Icon Colors */
+  --pc-icon-base: #1a5962;
+
+  /* Button Colors (from buttons.scss) */
+  --pc-button-primary: #1a5962;
+  --pc-button-primary-hover: #124248;
+  --pc-button-primary-press: #0d3035;
+  --pc-button-secondary: #ffffff;
+  --pc-button-secondary-hover: #f3f6f6;
+  --pc-button-secondary-press: #e8eeee;
+
+  /* Status Colors */
+  --pc-color-error: #e41a00;
+  --pc-color-success: #42af00;
+  --pc-color-warning: #f2c75c;
+  --pc-color-info: #2d7e8b;
+
+  /* Accent Color (for code) */
+  --pc-color-accent: #1a5962;
+
+  /* Typography */
+  --pc-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --pc-font-questa: 'Questa', Georgia, 'Times New Roman', serif;
+
+  /* Spacing */
+  --pc-spacing-xs: 4px;
+  --pc-spacing-sm: 8px;
+  --pc-spacing-md: 16px;
+  --pc-spacing-lg: 24px;
+  --pc-spacing-xl: 32px;
+  --pc-spacing-xxl: 48px;
+
+  /* Border Radius */
+  --pc-radius-sm: 5px;
+  --pc-radius-md: 10px;
+  --pc-radius-lg: 15px;
+
+  /* Shadows */
+  --pc-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --pc-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --pc-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--pc-font-family);
+  color: var(--pc-text-primary);
+  background-color: var(--pc-surface-tint);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Typography (Cookbook System)
+   ========================================================================== */
+
+.pc-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--pc-text-primary);
+  line-height: 1.2;
+  margin-bottom: var(--pc-spacing-md);
+}
+
+.pc-subheading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--pc-text-secondary);
+  line-height: 1.3;
+  margin-bottom: var(--pc-spacing-sm);
+}
+
+.pc-copy {
+  font-size: 1rem;
+  color: var(--pc-text-secondary);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Navigation Bar
+   ========================================================================== */
+
+.pc-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--pc-spacing-md) var(--pc-spacing-xl);
+  background-color: var(--pc-surface-light);
+  border-bottom: 1px solid var(--pc-surface-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--pc-shadow-sm);
+}
+
+.pc-navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--pc-spacing-md);
+}
+
+.pc-logo {
+  height: 32px;
+  width: auto;
+}
+
+.pc-navbar-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--pc-text-tertiary);
+  padding-left: var(--pc-spacing-md);
+  border-left: 1px solid var(--pc-surface-border);
+}
+
+.pc-navbar-nav {
+  display: flex;
+  list-style: none;
+  gap: var(--pc-spacing-xs);
+}
+
+.pc-nav-item {
+  display: flex;
+}
+
+.pc-nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--pc-spacing-sm) var(--pc-spacing-lg);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--pc-text-secondary);
+  text-decoration: none;
+  border-radius: var(--pc-radius-sm);
+  transition: all 0.2s ease;
+}
+
+.pc-nav-link:hover {
+  color: var(--pc-color-primary);
+  background-color: var(--pc-surface-tint);
+}
+
+.pc-nav-link.active {
+  color: var(--pc-surface-light);
+  background-color: var(--pc-color-primary);
+}
+
+/* ==========================================================================
+   Main Content Area
+   ========================================================================== */
+
+.pc-main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--pc-spacing-xl);
+}
+
+/* ==========================================================================
+   Template Sections
+   ========================================================================== */
+
+.pc-template-section {
+  display: none;
+  gap: var(--pc-spacing-xl);
+}
+
+.pc-template-section.active {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  align-items: start;
+}
+
+.pc-template-info {
+  background: var(--pc-surface-light);
+  border-radius: var(--pc-radius-md);
+  padding: var(--pc-spacing-lg);
+  border: 1px solid var(--pc-surface-border);
+  position: sticky;
+  top: 100px;
+}
+
+.pc-subject-lines {
+  margin-top: var(--pc-spacing-lg);
+  padding-top: var(--pc-spacing-lg);
+  border-top: 1px solid var(--pc-surface-border);
+}
+
+.pc-subject-lines ul {
+  list-style: none;
+  margin-top: var(--pc-spacing-sm);
+}
+
+.pc-subject-lines li {
+  padding: var(--pc-spacing-sm) var(--pc-spacing-md);
+  background: var(--pc-surface-tint);
+  border-radius: var(--pc-radius-sm);
+  margin-bottom: var(--pc-spacing-xs);
+  font-size: 0.875rem;
+  color: var(--pc-text-secondary);
+}
+
+/* ==========================================================================
+   Email Preview Frame
+   ========================================================================== */
+
+.pc-email-preview {
+  display: flex;
+  justify-content: center;
+}
+
+.pc-email-frame {
+  width: 100%;
+  max-width: 650px;
+  background: var(--pc-surface-light);
+  border-radius: var(--pc-radius-md);
+  box-shadow: var(--pc-shadow-lg);
+  overflow: hidden;
+}
+
+.pc-email-body {
+  background: var(--pc-surface-light);
+  padding: 0;
+}
+
+.template3-body {
+  background: var(--pc-surface-tint);
+  padding: var(--pc-spacing-lg);
+}
+
+/* ==========================================================================
+   Email Table & Container
+   ========================================================================== */
+
+.pc-email-table {
+  width: 100%;
+  background: var(--pc-surface-light);
+}
+
+.pc-email-container {
+  padding: var(--pc-spacing-xl) var(--pc-spacing-lg);
+}
+
+.pc-email-container.template3 {
+  padding: var(--pc-spacing-lg);
+  background: var(--pc-surface-tint);
+}
+
+/* ==========================================================================
+   Email Logo Variations
+   ========================================================================== */
+
+.pc-email-logo-left {
+  padding: var(--pc-spacing-lg) var(--pc-spacing-xl);
+  text-align: left;
+}
+
+.pc-email-logo-left img {
+  height: 40px;
+  width: auto;
+}
+
+.pc-email-logo-center {
+  padding: var(--pc-spacing-xl);
+  text-align: center;
+}
+
+.pc-email-logo-center img {
+  height: 40px;
+  width: auto;
+}
+
+/* ==========================================================================
+   Email Content - Common Styles
+   ========================================================================== */
+
+.pc-email-content {
+  padding: var(--pc-spacing-lg) var(--pc-spacing-xl);
+  text-align: left;
+}
+
+.template2 .pc-email-content,
+.template2-content {
+  text-align: center;
+}
+
+.pc-email-title-centered {
+  font-family: var(--pc-font-family);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--pc-text-primary);
+  margin-bottom: var(--pc-spacing-lg);
+  text-align: center;
+}
+
+.pc-email-text-centered {
+  font-size: 1rem;
+  color: var(--pc-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--pc-spacing-lg);
+  text-align: center;
+}
+
+.pc-email-title {
+  font-family: var(--pc-font-family);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--pc-text-primary);
+  margin-bottom: var(--pc-spacing-lg);
+}
+
+.pc-email-title-accent {
+  font-family: var(--pc-font-family);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--pc-color-accent);
+  margin-bottom: var(--pc-spacing-md);
+}
+
+.pc-email-title-questa {
+  font-family: var(--pc-font-questa);
+  font-size: 2rem;
+  font-weight: 400;
+  color: #383A3B;
+  margin-bottom: var(--pc-spacing-md);
+  text-align: center;
+  line-height: 2.375rem;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+.pc-title-left {
+  text-align: left !important;
+}
+
+.pc-email-greeting {
+  font-size: 1rem;
+  color: var(--pc-text-primary);
+  margin-bottom: var(--pc-spacing-md);
+}
+
+.pc-email-text {
+  font-size: 1rem;
+  color: var(--pc-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--pc-spacing-lg);
+}
+
+.pc-email-text-muted {
+  font-size: 0.9375rem;
+  color: var(--pc-text-tertiary);
+  line-height: 1.5;
+  margin-bottom: var(--pc-spacing-lg);
+  text-align: center;
+}
+
+.pc-email-signoff {
+  font-size: 1rem;
+  color: var(--pc-text-primary);
+  line-height: 1.6;
+  margin-top: var(--pc-spacing-xl);
+}
+
+.pc-email-signoff-centered {
+  font-size: 1rem;
+  color: var(--pc-text-primary);
+  line-height: 1.6;
+  margin-top: var(--pc-spacing-lg);
+  text-align: center;
+}
+
+/* ==========================================================================
+   Verification Code Displays
+   ========================================================================== */
+
+/* Template 1: Simple display with tint background */
+.pc-verification-code-display {
+  padding: var(--pc-spacing-lg) 0;
+  margin-bottom: var(--pc-spacing-lg);
+}
+
+.pc-verification-code-display .pc-verification-code {
+  font-family: 'Inter', monospace;
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--pc-color-accent);
+  display: block;
+}
+
+/* Template 1: VTEX-inspired styles */
+.pc-email-logo-vtex {
+  padding: var(--pc-spacing-lg) 0 0 0;
+  text-align: left;
+}
+
+.pc-email-logo-vtex img {
+  height: 40px;
+  width: auto;
+}
+
+.pc-email-content-vtex {
+  padding: var(--pc-spacing-xl) 0;
+  text-align: left;
+}
+
+.pc-email-title-vtex {
+  font-family: var(--pc-font-family);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--pc-text-primary);
+  margin-bottom: var(--pc-spacing-md);
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* Unified verification code class for all templates */
+.pc-verification-code-unified {
+  font-family: 'Inter', monospace;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--pc-color-accent);
+  display: block;
+  line-height: 1.2;
+}
+
+/* Responsive code size for mobile */
+@media (max-width: 768px) {
+  .pc-verification-code-unified {
+    font-size: 2rem;
+  }
+}
+
+.pc-verification-code-vtex {
+  margin-bottom: var(--pc-spacing-xl);
+}
+
+.pc-code-vtex {
+  font-family: 'Inter', monospace;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--pc-color-accent);
+  display: block;
+  line-height: 1.2;
+}
+
+.pc-email-greeting-vtex {
+  font-size: 1rem;
+  color: var(--pc-text-primary);
+  margin-bottom: var(--pc-spacing-md);
+  line-height: 1.5;
+}
+
+.pc-email-text-vtex {
+  font-size: 1rem;
+  color: var(--pc-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--pc-spacing-lg);
+}
+
+.pc-email-signoff-vtex {
+  font-size: 1rem;
+  color: var(--pc-text-primary);
+  line-height: 1.6;
+  margin-top: var(--pc-spacing-lg);
+}
+
+.pc-email-footer-vtex {
+  padding-top: var(--pc-spacing-xxl);
+  text-align: left;
+  border-top: 1px solid var(--pc-surface-border);
+  margin-top: var(--pc-spacing-xl);
+}
+
+.pc-footer-update {
+  font-size: 0.8125rem;
+  color: var(--pc-text-secondary);
+  margin-bottom: var(--pc-spacing-md);
+  line-height: 1.5;
+}
+
+.pc-footer-update a {
+  color: var(--pc-color-primary);
+  text-decoration: underline;
+}
+
+.pc-footer-disclaimer {
+  font-size: 0.8125rem;
+  color: var(--pc-text-tertiary);
+  margin-bottom: var(--pc-spacing-md);
+  line-height: 1.5;
+}
+
+.pc-footer-disclaimer a {
+  color: var(--pc-color-primary);
+  text-decoration: underline;
+}
+
+.pc-footer-address {
+  font-size: 0.75rem;
+  color: var(--pc-text-tertiary);
+  margin-top: var(--pc-spacing-md);
+}
+
+/* Template 2: Spaced digits */
+.pc-verification-code-spaced {
+  display: flex;
+  justify-content: center;
+  gap: var(--pc-spacing-sm);
+  padding: var(--pc-spacing-lg);
+  margin-bottom: var(--pc-spacing-lg);
+  background-color: var(--pc-surface-tint-2);
+  border-radius: 6px;
+}
+
+.pc-code-digit {
+  font-family: 'Inter', monospace;
+  font-weight: 700;
+  width: 40px;
+  text-align: center;
+  /* Size inherited from pc-verification-code-unified */
+}
+
+/* Template 3: Clean minimal display */
+.pc-verification-code-clean {
+  padding: var(--pc-spacing-xl) 0;
+  margin-bottom: var(--pc-spacing-md);
+  text-align: center;
+}
+
+.pc-verification-code-inter {
+  font-family: 'Inter', monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--pc-text-primary);
+  display: block;
+}
+
+/* ==========================================================================
+   Email Illustration
+   ========================================================================== */
+
+.pc-email-illustration {
+  text-align: center;
+  padding: var(--pc-spacing-md) 0;
+}
+
+.pc-email-illustration img {
+  max-width: 180px;
+  height: auto;
+}
+
+/* ==========================================================================
+   Email Card (Template 3)
+   ========================================================================== */
+
+.pc-email-card {
+  background: var(--pc-surface-light);
+  border-radius: var(--pc-radius-md);
+  padding: var(--pc-spacing-xl);
+  margin-bottom: var(--pc-spacing-lg);
+  text-align: center;
+}
+
+/* Template 3: Layers-inspired styles */
+.pc-email-logo-layers {
+  text-align: center;
+  padding: var(--pc-spacing-xl) 0;
+}
+
+.pc-email-card-layers {
+  background: var(--pc-surface-light);
+  border-radius: var(--pc-radius-lg);
+  padding: var(--pc-spacing-xxl) var(--pc-spacing-xl);
+  margin: 0 auto var(--pc-spacing-lg);
+  max-width: 520px;
+  text-align: center;
+}
+
+.pc-email-title-layers {
+  font-family: var(--pc-font-family);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--pc-text-primary);
+  margin-bottom: var(--pc-spacing-lg);
+  line-height: 1.2;
+}
+
+.pc-email-text-layers {
+  font-size: 1rem;
+  color: var(--pc-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--pc-spacing-xl);
+}
+
+.pc-verification-code-layers {
+  padding: var(--pc-spacing-xl) 0;
+  margin-bottom: var(--pc-spacing-lg);
+}
+
+.pc-verification-code-mono {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--pc-text-primary);
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pc-email-text-muted-layers {
+  font-size: 0.875rem;
+  color: var(--pc-text-tertiary);
+  line-height: 1.5;
+  margin-bottom: var(--pc-spacing-lg);
+}
+
+.pc-email-signoff-layers {
+  font-size: 1rem;
+  color: var(--pc-text-secondary);
+  line-height: 1.6;
+  margin-top: var(--pc-spacing-xl);
+  padding-top: var(--pc-spacing-lg);
+}
+
+.pc-email-footer-layers {
+  text-align: center;
+  padding: var(--pc-spacing-lg) 0;
+}
+
+.pc-email-footer-layers a {
+  font-size: 0.875rem;
+  color: var(--pc-text-tertiary);
+  text-decoration: none;
+}
+
+.pc-email-footer-layers a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Timer Display
+   ========================================================================== */
+
+.pc-email-timer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--pc-spacing-sm);
+  font-size: 0.9375rem;
+  color: var(--pc-text-secondary);
+  margin-bottom: var(--pc-spacing-lg);
+  width: 100%;
+}
+
+.pc-email-timer .pc-icon-base {
+  width: 18px;
+  height: 18px;
+  color: var(--pc-icon-base);
+}
+
+/* ==========================================================================
+   Help Blocks (Template 2)
+   ========================================================================== */
+
+.pc-help-block {
+  text-align: left;
+  padding: var(--pc-spacing-lg) 0;
+  border-top: 1px solid var(--pc-surface-border);
+}
+
+.pc-help-block:first-of-type {
+  margin-top: var(--pc-spacing-lg);
+}
+
+.pc-help-block h4 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--pc-text-primary);
+  margin-bottom: var(--pc-spacing-xs);
+}
+
+.pc-help-block p {
+  font-size: 0.875rem;
+  color: var(--pc-text-secondary);
+  line-height: 1.5;
+}
+
+.pc-help-block a {
+  color: var(--pc-color-primary);
+  text-decoration: underline;
+}
+
+/* Template 2: Centered help blocks */
+.pc-help-block-centered {
+  text-align: center;
+  padding: var(--pc-spacing-lg) 0;
+  border-top: 1px solid var(--pc-surface-border);
+}
+
+.pc-help-block-centered:first-of-type {
+  margin-top: var(--pc-spacing-lg);
+}
+
+.pc-help-block-centered h4 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--pc-text-primary);
+  margin-bottom: var(--pc-spacing-xs);
+}
+
+.pc-help-block-centered p {
+  font-size: 0.875rem;
+  color: var(--pc-text-secondary);
+  line-height: 1.5;
+}
+
+.pc-help-block-centered a {
+  color: var(--pc-color-primary);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Benefits Section
+   ========================================================================== */
+
+.pc-benefits-section {
+  background: var(--pc-surface-light);
+  border-radius: var(--pc-radius-md);
+  padding: var(--pc-spacing-xl) var(--pc-spacing-lg);
+  margin: 0 auto var(--pc-spacing-lg);
+  max-width: 520px;
+  text-align: left;
+}
+
+.pc-benefits-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--pc-text-primary);
+  margin-bottom: var(--pc-spacing-md);
+}
+
+.pc-benefits-list {
+  list-style: none;
+}
+
+.pc-benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--pc-spacing-sm);
+  padding: var(--pc-spacing-sm) 0;
+  font-size: 0.9375rem;
+  color: var(--pc-text-secondary);
+}
+
+.pc-benefits-list svg {
+  width: 18px;
+  height: 18px;
+  color: var(--pc-color-success);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Help Section
+   ========================================================================== */
+
+.pc-help-section {
+  background: var(--pc-surface-light);
+  border-radius: var(--pc-radius-md);
+  padding: var(--pc-spacing-xl) var(--pc-spacing-lg);
+  margin: 0 auto var(--pc-spacing-lg);
+  max-width: 520px;
+  text-align: center;
+}
+
+.pc-help-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--pc-text-primary);
+  margin-bottom: var(--pc-spacing-xs);
+}
+
+.pc-help-section > p {
+  font-size: 0.875rem;
+  color: var(--pc-text-tertiary);
+  margin-bottom: var(--pc-spacing-md);
+}
+
+.pc-help-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--pc-spacing-md);
+}
+
+/* ==========================================================================
+   Buttons (Cookbook Design System - from buttons.scss)
+   ========================================================================== */
+
+.pc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--pc-spacing-sm);
+  padding: 14px 15px;
+  font-family: var(--pc-font-family);
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  text-decoration: none;
+  border-radius: var(--pc-radius-sm);
+  cursor: pointer;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.pc-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pc-btn-primary {
+  background-color: var(--pc-button-primary);
+  border: 1px solid var(--pc-button-primary);
+  color: #ffffff;
+}
+
+.pc-btn-primary:hover {
+  background-color: var(--pc-button-primary-hover);
+  border: 1px solid var(--pc-button-primary-hover);
+  color: #ffffff;
+}
+
+.pc-btn-primary:active,
+.pc-btn-primary:focus {
+  background-color: var(--pc-button-primary-press);
+  border: 1px solid var(--pc-button-primary-press);
+  color: #ffffff;
+}
+
+/* Secondary Button - from buttons.scss */
+.pc-btn-secondary {
+  background-color: var(--pc-button-secondary);
+  border: 1px solid var(--pc-button-primary);
+  color: var(--pc-color-primary);
+}
+
+.pc-btn-secondary:hover {
+  background-color: var(--pc-button-secondary-hover);
+  border: 1px solid var(--pc-color-primary);
+  color: var(--pc-color-primary);
+}
+
+.pc-btn-secondary:active,
+.pc-btn-secondary:focus {
+  background-color: var(--pc-button-secondary-press);
+  border: 1px solid var(--pc-button-secondary-press);
+  color: var(--pc-color-primary);
+}
+
+/* ==========================================================================
+   Email Footers
+   ========================================================================== */
+
+/* Template 1: Minimal footer */
+.pc-email-footer-minimal {
+  padding: var(--pc-spacing-xl);
+  padding-top: var(--pc-spacing-xxl);
+  text-align: left;
+  border-top: 1px solid var(--pc-surface-border);
+  margin-top: var(--pc-spacing-xl);
+}
+
+.pc-footer-note {
+  font-size: 0.8125rem;
+  color: var(--pc-text-tertiary);
+  margin-bottom: var(--pc-spacing-md);
+  line-height: 1.5;
+}
+
+.pc-footer-note a {
+  color: var(--pc-color-primary);
+  text-decoration: underline;
+}
+
+.pc-footer-links {
+  display: flex;
+  gap: var(--pc-spacing-sm);
+  margin-bottom: var(--pc-spacing-md);
+}
+
+.pc-footer-links a {
+  font-size: 0.75rem;
+  color: var(--pc-color-primary);
+  text-decoration: none;
+}
+
+.pc-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.pc-footer-links span {
+  color: var(--pc-surface-border);
+}
+
+.pc-footer-copyright {
+  font-size: 0.6875rem;
+  color: var(--pc-text-tertiary);
+}
+
+/* Template 2: Navigation footer */
+.pc-email-footer-nav {
+  padding: var(--pc-spacing-xl);
+  text-align: center;
+  border-top: 1px solid var(--pc-surface-border);
+  margin-top: var(--pc-spacing-lg);
+}
+
+.pc-footer-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--pc-spacing-md);
+  margin-bottom: var(--pc-spacing-lg);
+}
+
+.pc-footer-nav-links a {
+  font-size: 0.8125rem;
+  color: var(--pc-text-secondary);
+  text-decoration: none;
+}
+
+.pc-footer-nav-links a:hover {
+  text-decoration: underline;
+}
+
+.pc-footer-brand {
+  margin-bottom: var(--pc-spacing-sm);
+}
+
+.pc-footer-brand a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--pc-color-primary);
+  text-decoration: none;
+}
+
+/* Template 3: Simple footer */
+.pc-email-footer-simple {
+  padding: var(--pc-spacing-lg);
+  text-align: center;
+}
+
+.pc-email-footer-simple a {
+  font-size: 0.875rem;
+  color: var(--pc-color-primary);
+  text-decoration: none;
+}
+
+.pc-email-footer-simple a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .pc-template-section.active {
+    grid-template-columns: 1fr;
+  }
+
+  .pc-template-info {
+    position: static;
+    margin-bottom: var(--pc-spacing-lg);
+  }
+
+  .pc-navbar {
+    flex-direction: column;
+    gap: var(--pc-spacing-md);
+    padding: var(--pc-spacing-md);
+  }
+
+  .pc-navbar-nav {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .pc-main-content {
+    padding: var(--pc-spacing-md);
+  }
+
+  .pc-heading {
+    font-size: 1.5rem;
+  }
+
+  .pc-email-content {
+    padding: var(--pc-spacing-md);
+  }
+
+  .pc-verification-code-display .pc-verification-code {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .pc-verification-code-spaced {
+    gap: var(--pc-spacing-xs);
+  }
+
+  .pc-code-digit {
+    font-size: 1.5rem;
+    width: 32px;
+  }
+
+  .pc-verification-code-inter {
+    font-size: 2rem;
+    letter-spacing: 0.15em;
+  }
+
+  .pc-help-buttons {
+    flex-direction: column;
+  }
+
+  .pc-nav-link {
+    padding: var(--pc-spacing-sm) var(--pc-spacing-md);
+    font-size: 0.8125rem;
+  }
+
+  .pc-footer-nav-links {
+    flex-direction: column;
+    gap: var(--pc-spacing-sm);
+  }
+}
