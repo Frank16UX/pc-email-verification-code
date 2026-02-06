@@ -1,348 +1,743 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pampered Chef - Verification Code Email Templates</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Navigation Bar -->
-  <nav class="pc-navbar">
-    <div class="pc-navbar-brand">
-      <img src="assets/pc-logo-color.svg" alt="Pampered Chef" class="pc-logo">
-      <span class="pc-navbar-title">Email Templates</span>
-    </div>
-    <ul class="pc-navbar-nav">
-      <li class="pc-nav-item">
-        <a href="#template1" class="pc-nav-link active" data-template="template1">Template 1</a>
-      </li>
-      <li class="pc-nav-item">
-        <a href="#template2" class="pc-nav-link" data-template="template2">Template 2</a>
-      </li>
-      <li class="pc-nav-item">
-        <a href="#template3" class="pc-nav-link" data-template="template3">Template 3</a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Main Content -->
-  <main class="pc-main-content">
-
-    <!-- Template 1: Direct & Efficient (VTEX-inspired) -->
-    <section id="template1" class="pc-template-section active">
-      <div class="pc-template-info">
-        <h1 class="pc-heading">Template 1: Direct & Efficient</h1>
-        <p class="pc-copy">Minimal copy, maximum code visibility. Fast scanning with a clear action path for users who want to verify quickly. Inspired by VTEX's clean approach.</p>
-        <div class="pc-subject-lines">
-          <h3 class="pc-subheading">Subject Line Options:</h3>
-          <ul>
-            <li>Your Pampered Chef verification code</li>
-            <li>Your code: 847291</li>
-            <li>Verify your account - Code inside</li>
-          </ul>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pampered Chef - Verification Code Email Templates</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="pc-navbar">
+      <div class="pc-navbar-brand">
+        <img
+          src="assets/pc-logo-color.svg"
+          alt="Pampered Chef"
+          class="pc-logo"
+        />
+        <span class="pc-navbar-title">Email Templates</span>
       </div>
+      <ul class="pc-navbar-nav">
+        <li class="pc-nav-item">
+          <a
+            href="#templateFinal"
+            class="pc-nav-link active"
+            data-template="templateFinal"
+            >Template Final</a
+          >
+        </li>
+        <li class="pc-nav-item pc-nav-item-dropdown">
+          <a href="#playground" class="pc-nav-link" data-template="playground"
+            >Playground Templates</a
+          >
+          <div class="pc-dropdown" id="playgroundDropdown">
+            <div class="pc-dropdown-menu">
+              <a
+                href="#"
+                class="pc-dropdown-item active"
+                data-playground="template1"
+                >Template 1: Direct & Efficient</a
+              >
+              <a href="#" class="pc-dropdown-item" data-playground="template2"
+                >Template 2: Trust-Focused</a
+              >
+              <a href="#" class="pc-dropdown-item" data-playground="template3"
+                >Template 3: Welcoming & Helpful</a
+              >
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
 
-      <div class="pc-email-preview">
-        <div class="pc-email-frame">
-          <div class="pc-email-body">
-            <!-- Email Template 1 Content -->
-            <table class="pc-email-table" cellpadding="0" cellspacing="0">
-              <tr>
-                <td class="pc-email-container template1">
-                  <!-- Logo -->
-                  <div class="pc-email-logo-vtex">
-                    <img src="assets/pc-logo-color.svg" alt="Pampered Chef">
-                  </div>
-
-                  <!-- Main Content -->
-                  <div class="pc-email-content-vtex">
-                    <h1 class="pc-email-title-questa pc-title-left">Your verification code is:</h1>
-
-                    <div class="pc-verification-code-vtex">
-                      <span class="pc-verification-code-unified">847291</span>
-                    </div>
-
-                    <p class="pc-email-greeting-vtex">Hello,</p>
-
-                    <p class="pc-email-text-vtex">
-                      Please return to the verification page and enter the code above to verify your identity. This code expires in <strong><span class="countdown-timer" data-expiry="1800">30</span> minutes</strong>.
-                    </p>
-
-                    <p class="pc-email-signoff-vtex">
-                      Best regards,<br>
-                      The Pampered Chef Team
-                    </p>
-                  </div>
-
-                  <!-- Footer -->
-                  <div class="pc-email-footer-vtex">
-                    <p class="pc-footer-disclaimer">We will never call or text you to request this code.</p>
-                    <p class="pc-footer-disclaimer">This email is automatically sent and doesn't receive responses.<br>Need help? <a href="#">Contact us</a></p>
-                    <p class="pc-footer-address">&copy; 2026 Pampered Chef, 1 Pampered Chef Lane, Addison, IL 60101</p>
-                  </div>
-                </td>
-              </tr>
-            </table>
+    <!-- Main Content -->
+    <main class="pc-main-content">
+      <!-- Template Final: Combined Design -->
+      <section id="templateFinal" class="pc-template-section active">
+        <div class="pc-template-info">
+          <h1 class="pc-heading">Template Final</h1>
+          <p class="pc-copy">
+            Combined design based on Template 2 and the benefits list from
+            Template 3. The aesthetic reflects the visual direction we want for
+            Pampered Chef email templates.
+          </p>
+          <div class="pc-subject-lines">
+            <h3 class="pc-subheading">Subject Line Options:</h3>
+            <ul>
+              <li>Welcome! Verify your Pampered Chef account</li>
+              <li>Almost there! Your verification code awaits</li>
+              <li>Secure your Pampered Chef experience</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Template 2: Trust-Focused & Branded (Target-inspired) -->
-    <section id="template2" class="pc-template-section">
-      <div class="pc-template-info">
-        <h1 class="pc-heading">Template 2: Trust-Focused & Branded</h1>
-        <p class="pc-copy">Emphasizes Pampered Chef brand personality with reassuring messaging and security confidence-building elements. Inspired by Target's visual approach.</p>
-        <div class="pc-subject-lines">
-          <h3 class="pc-subheading">Subject Line Options:</h3>
-          <ul>
-            <li>Welcome! Verify your Pampered Chef account</li>
-            <li>Almost there! Your verification code awaits</li>
-            <li>Secure your Pampered Chef experience</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pc-email-preview">
-        <div class="pc-email-frame">
-          <div class="pc-email-body">
-            <!-- Email Template 2 Content -->
-            <table class="pc-email-table" cellpadding="0" cellspacing="0">
-              <tr>
-                <td class="pc-email-container template2">
-                  <!-- Logo -->
-                  <div class="pc-email-logo-center">
-                    <img src="assets/pc-logo-color.svg" alt="Pampered Chef">
-                  </div>
-
-                  <!-- Illustration -->
-                  <div class="pc-email-illustration">
-                    <img src="assets/Reset Password/email-validation-illustration.svg" alt="Email Verification">
-                  </div>
-
-                  <!-- Main Content -->
-                  <div class="pc-email-content template2-content">
-                    <h1 class="pc-email-title-questa">Account Verification Code</h1>
-
-                    <div class="pc-verification-code-spaced">
-                      <span class="pc-code-digit pc-verification-code-unified">8</span>
-                      <span class="pc-code-digit pc-verification-code-unified">4</span>
-                      <span class="pc-code-digit pc-verification-code-unified">7</span>
-                      <span class="pc-code-digit pc-verification-code-unified">2</span>
-                      <span class="pc-code-digit pc-verification-code-unified">9</span>
-                      <span class="pc-code-digit pc-verification-code-unified">1</span>
+        <div class="pc-email-preview">
+          <div class="pc-email-frame">
+            <div class="pc-email-body">
+              <table class="pc-email-table" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="pc-email-container template-final">
+                    <!-- Logo -->
+                    <div class="pc-email-logo-center">
+                      <img src="assets/pc-logo-color.svg" alt="Pampered Chef" />
                     </div>
 
-                    <p class="pc-email-text-centered">
-                      Enter this code on the <strong>Account Verification</strong> page to complete your account setup. This code is temporary and can only be used once.
-                    </p>
-
-                    <p class="pc-email-text-centered" style="margin-top: -8px; margin-bottom: 24px;">
-                      This code expires in <strong><span class="countdown-timer" data-expiry="1800">30</span> minutes</strong>.
-                    </p>
-
-                    <div class="pc-help-block-centered">
-                      <h4>Closed your browser tab?</h4>
-                      <p>No problem! <a href="#">Visit the verification page</a> and you can request a new code.</p>
+                    <!-- Illustration -->
+                    <div class="pc-email-illustration">
+                      <img
+                        src="assets/Reset Password/email-validation-illustration.svg"
+                        alt="Email Verification"
+                      />
                     </div>
 
-                    <div class="pc-help-block-centered">
-                      <h4>Didn't request this?</h4>
-                      <p><a href="#">Update your security settings</a> immediately or <a href="#">contact us</a> to ensure your PamperedChef.com account security.</p>
-                    </div>
-                  </div>
+                    <!-- Main Content -->
+                    <div class="pc-final-content">
+                      <h1 class="pc-email-title-questa">
+                        Here's your verification code
+                      </h1>
 
-                  <!-- Footer -->
-                  <div class="pc-email-footer-nav">
-                    <div class="pc-footer-nav-links">
-                      <a href="#">Help</a>
-                      <a href="#">Returns</a>
-                      <a href="#">Contact</a>
-                      <a href="#">Find a Consultant</a>
-                      <a href="#">Terms of use</a>
-                      <a href="#">Privacy</a>
+                      <div class="pc-final-code-box">
+                        <span class="pc-final-code">847291</span>
+                      </div>
+
+                      <p class="pc-final-body">
+                        Enter this code on the Account Verification page to
+                        finish setting up your account.
+                      </p>
+
+                      <p class="pc-final-body pc-final-expiry">
+                        This code expires in
+                        <strong
+                          ><span class="countdown-timer" data-expiry="1800"
+                            >30</span
+                          >
+                          minutes</strong
+                        >
+                        and can only be used once.
+                      </p>
+
+                      <!-- Benefits List -->
+                      <div class="pc-final-benefits">
+                        <p class="pc-final-benefits-heading">
+                          <strong>Once verified, you'll have access to:</strong>
+                        </p>
+                        <ul class="pc-final-benefits-list">
+                          <li>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Create/manage wish list or registry
+                          </li>
+                          <li>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Self-service returns
+                          </li>
+                          <li>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Visibility into which consultants you have worked
+                            with in the past
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- Help Sections -->
+                      <div class="pc-final-help-block">
+                        <h4>Closed your browser tab?</h4>
+                        <p>
+                          No problem!
+                          <a href="#">Visit the verification page</a> and you
+                          can request a new code.
+                        </p>
+                      </div>
+
+                      <div class="pc-final-help-block">
+                        <h4>Didn't request this?</h4>
+                        <p>
+                          <a href="#">Update your security settings</a>
+                          immediately or <a href="#">contact us</a> to ensure
+                          your PamperedChef.com account security.
+                        </p>
+                      </div>
                     </div>
-                    <div class="pc-footer-brand">
-                      <a href="#">PamperedChef.com</a>
+
+                    <!-- Footer -->
+                    <div class="pc-final-footer">
+                      <div class="pc-final-footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Accessibility Statement</a>
+                        <a href="#">Cookie Preferences</a>
+                      </div>
+                      <p class="pc-final-footer-copyright">
+                        &copy; 2026 Pampered Chef used under license. All Rights
+                        Reserved.
+                      </p>
                     </div>
-                    <p class="pc-footer-copyright">&copy; 2026 Pampered Chef, Ltd.</p>
-                  </div>
-                </td>
-              </tr>
-            </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Template 3: Interactive & Helpful (Layers-inspired) -->
-    <section id="template3" class="pc-template-section">
-      <div class="pc-template-info">
-        <h1 class="pc-heading">Template 3: Welcoming & Helpful</h1>
-        <p class="pc-copy">Clean, centered design with generous whitespace. Explains benefits and provides visible support resources. Inspired by Layers' minimal approach.</p>
-        <div class="pc-subject-lines">
-          <h3 class="pc-subheading">Subject Line Options:</h3>
-          <ul>
-            <li>Welcome to Pampered Chef</li>
-            <li>One step away from your Pampered Chef account</li>
-            <li>Complete your verification</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pc-email-preview">
-        <div class="pc-email-frame">
-          <div class="pc-email-body template3-body">
-            <!-- Email Template 3 Content -->
-            <table class="pc-email-table" cellpadding="0" cellspacing="0">
-              <tr>
-                <td class="pc-email-container template3">
-                  <!-- Logo -->
-                  <div class="pc-email-logo-layers">
-                    <img src="assets/pc-logo-color.svg" alt="Pampered Chef" style="height: 40px; width: auto;">
-                  </div>
-
-                  <!-- Card Content -->
-                  <div class="pc-email-card-layers">
-                    <h1 class="pc-email-title-questa">Welcome to Pampered Chef</h1>
-
-                    <p class="pc-email-text-layers">
-                      Please verify your email address using the code below to complete account setup.
-                    </p>
-
-                    <div class="pc-verification-code-layers">
-                      <span class="pc-verification-code-unified">847291</span>
-                    </div>
-
-                    <p class="pc-email-timer">
-                      <svg class="pc-icon-base" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <polyline points="12 6 12 12 16 14"/>
-                      </svg>
-                      Code expires in <strong><span class="countdown-timer" data-expiry="1800">30</span> minutes</strong>
-                    </p>
-
-                    <p class="pc-email-text-muted-layers">
-                      If you didn't sign up for Pampered Chef, you can safely ignore this email.
-                    </p>
-
-                    <p class="pc-email-signoff-layers">
-                      Thanks,<br>
-                      <strong>Pampered Chef</strong>
-                    </p>
-                  </div>
-
-                  <!-- Benefits & Help Section -->
-                  <div class="pc-benefits-section">
-                    <h3>Once verified, you'll have access to:</h3>
-                    <ul class="pc-benefits-list">
-                      <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <polyline points="20 6 9 17 4 12"/>
-                        </svg>
-                        Exclusive recipes and cooking tips
-                      </li>
-                      <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <polyline points="20 6 9 17 4 12"/>
-                        </svg>
-                        Special member discounts
-                      </li>
-                      <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <polyline points="20 6 9 17 4 12"/>
-                        </svg>
-                        Early access to new products
-                      </li>
-                    </ul>
-                    
-                    <h4 style="margin-top: var(--pc-spacing-xl); margin-bottom: var(--pc-spacing-xs);">Need help?</h4>
-                    <p style="font-size: 0.875rem; color: var(--pc-text-tertiary); margin-bottom: var(--pc-spacing-md);">Our support team is here for you 24/7</p>
-                    <div class="pc-help-buttons">
-                      <a href="#" class="pc-btn pc-btn-secondary">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                          <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        Email Support
-                      </a>
-                      <a href="#" class="pc-btn pc-btn-secondary">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <circle cx="12" cy="12" r="10"/>
-                          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                          <line x1="12" y1="17" x2="12.01" y2="17"/>
-                        </svg>
-                        FAQ
-                      </a>
-                    </div>
-                  </div>
-
-                  <!-- Footer -->
-                  <div class="pc-email-footer-simple">
-                    <a href="#">Manage your notifications</a>
-                    <p style="font-size: 0.75rem; color: var(--pc-text-tertiary); margin-top: var(--pc-spacing-md);">&copy; 2026 Pampered Chef, Ltd.</p>
-                  </div>
-                </td>
-              </tr>
-            </table>
+      <!-- Playground Templates (grouped) -->
+      <section id="playground" class="pc-template-section">
+        <div class="pc-template-info">
+          <!-- Template 1 Info (default) -->
+          <div
+            class="pc-playground-info active"
+            data-playground-info="template1"
+          >
+            <h1 class="pc-heading">Template 1: Direct & Efficient</h1>
+            <p class="pc-copy">
+              Minimal copy, maximum code visibility. Fast scanning with a clear
+              action path for users who want to verify quickly. Inspired by
+              VTEX's clean approach.
+            </p>
+            <div class="pc-subject-lines">
+              <h3 class="pc-subheading">Subject Line Options:</h3>
+              <ul>
+                <li>Your Pampered Chef verification code</li>
+                <li>Your code: 847291</li>
+                <li>Verify your account - Code inside</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Template 2 Info -->
+          <div class="pc-playground-info" data-playground-info="template2">
+            <h1 class="pc-heading">Template 2: Trust-Focused & Branded</h1>
+            <p class="pc-copy">
+              Emphasizes Pampered Chef brand personality with reassuring
+              messaging and security confidence-building elements. Inspired by
+              Target's visual approach.
+            </p>
+            <div class="pc-subject-lines">
+              <h3 class="pc-subheading">Subject Line Options:</h3>
+              <ul>
+                <li>Welcome! Verify your Pampered Chef account</li>
+                <li>Almost there! Your verification code awaits</li>
+                <li>Secure your Pampered Chef experience</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Template 3 Info -->
+          <div class="pc-playground-info" data-playground-info="template3">
+            <h1 class="pc-heading">Template 3: Welcoming & Helpful</h1>
+            <p class="pc-copy">
+              Clean, centered design with generous whitespace. Explains benefits
+              and provides visible support resources. Inspired by Layers'
+              minimal approach.
+            </p>
+            <div class="pc-subject-lines">
+              <h3 class="pc-subheading">Subject Line Options:</h3>
+              <ul>
+                <li>Welcome to Pampered Chef</li>
+                <li>One step away from your Pampered Chef account</li>
+                <li>Complete your verification</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-  </main>
+        <div class="pc-email-preview">
+          <!-- Template 1 Preview -->
+          <div
+            class="pc-playground-preview active"
+            data-playground-preview="template1"
+          >
+            <div class="pc-email-frame">
+              <div class="pc-email-body">
+                <table class="pc-email-table" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="pc-email-container template1">
+                      <div class="pc-email-logo-vtex">
+                        <img
+                          src="assets/pc-logo-color.svg"
+                          alt="Pampered Chef"
+                        />
+                      </div>
+                      <div class="pc-email-content-vtex">
+                        <h1 class="pc-email-title-questa pc-title-left">
+                          Your verification code is:
+                        </h1>
+                        <div class="pc-verification-code-vtex">
+                          <span class="pc-verification-code-unified"
+                            >847291</span
+                          >
+                        </div>
+                        <p class="pc-email-greeting-vtex">Hello,</p>
+                        <p class="pc-email-text-vtex">
+                          Please return to the verification page and enter the
+                          code above to verify your identity. This code expires
+                          in
+                          <strong
+                            ><span class="countdown-timer" data-expiry="1800"
+                              >30</span
+                            >
+                            minutes</strong
+                          >.
+                        </p>
+                        <p class="pc-email-signoff-vtex">
+                          Best regards,<br />
+                          The Pampered Chef Team
+                        </p>
+                      </div>
+                      <div class="pc-email-footer-vtex">
+                        <p class="pc-footer-disclaimer">
+                          We will never call or text you to request this code.
+                        </p>
+                        <p class="pc-footer-disclaimer">
+                          This email is automatically sent and doesn't receive
+                          responses.<br />Need help? <a href="#">Contact us</a>
+                        </p>
+                        <p class="pc-footer-address">
+                          &copy; 2026 Pampered Chef, 1 Pampered Chef Lane,
+                          Addison, IL 60101
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
 
-  <script>
-    // Navigation functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const navLinks = document.querySelectorAll('.pc-nav-link');
-      const sections = document.querySelectorAll('.pc-template-section');
+          <!-- Template 2 Preview -->
+          <div
+            class="pc-playground-preview"
+            data-playground-preview="template2"
+          >
+            <div class="pc-email-frame">
+              <div class="pc-email-body">
+                <table class="pc-email-table" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="pc-email-container template2">
+                      <div class="pc-email-logo-center">
+                        <img
+                          src="assets/pc-logo-color.svg"
+                          alt="Pampered Chef"
+                        />
+                      </div>
+                      <div class="pc-email-illustration">
+                        <img
+                          src="assets/Reset Password/email-validation-illustration.svg"
+                          alt="Email Verification"
+                        />
+                      </div>
+                      <div class="pc-email-content template2-content">
+                        <h1 class="pc-email-title-questa">
+                          Account Verification Code
+                        </h1>
+                        <div class="pc-verification-code-spaced">
+                          <span
+                            class="pc-code-digit pc-verification-code-unified"
+                            >8</span
+                          >
+                          <span
+                            class="pc-code-digit pc-verification-code-unified"
+                            >4</span
+                          >
+                          <span
+                            class="pc-code-digit pc-verification-code-unified"
+                            >7</span
+                          >
+                          <span
+                            class="pc-code-digit pc-verification-code-unified"
+                            >2</span
+                          >
+                          <span
+                            class="pc-code-digit pc-verification-code-unified"
+                            >9</span
+                          >
+                          <span
+                            class="pc-code-digit pc-verification-code-unified"
+                            >1</span
+                          >
+                        </div>
+                        <p class="pc-email-text-centered">
+                          Enter this code on the
+                          <strong>Account Verification</strong> page to complete
+                          your account setup. This code is temporary and can
+                          only be used once.
+                        </p>
+                        <p
+                          class="pc-email-text-centered"
+                          style="margin-top: -8px; margin-bottom: 24px"
+                        >
+                          This code expires in
+                          <strong
+                            ><span class="countdown-timer" data-expiry="1800"
+                              >30</span
+                            >
+                            minutes</strong
+                          >.
+                        </p>
+                        <div class="pc-help-block-centered">
+                          <h4>Closed your browser tab?</h4>
+                          <p>
+                            No problem!
+                            <a href="#">Visit the verification page</a> and you
+                            can request a new code.
+                          </p>
+                        </div>
+                        <div class="pc-help-block-centered">
+                          <h4>Didn't request this?</h4>
+                          <p>
+                            <a href="#">Update your security settings</a>
+                            immediately or <a href="#">contact us</a> to ensure
+                            your PamperedChef.com account security.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="pc-email-footer-nav">
+                        <div class="pc-footer-nav-links">
+                          <a href="#">Help</a>
+                          <a href="#">Returns</a>
+                          <a href="#">Contact</a>
+                          <a href="#">Find a Consultant</a>
+                          <a href="#">Terms of use</a>
+                          <a href="#">Privacy</a>
+                        </div>
+                        <div class="pc-footer-brand">
+                          <a href="#">PamperedChef.com</a>
+                        </div>
+                        <p class="pc-footer-copyright">
+                          &copy; 2026 Pampered Chef, Ltd.
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
 
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
+          <!-- Template 3 Preview -->
+          <div
+            class="pc-playground-preview"
+            data-playground-preview="template3"
+          >
+            <div class="pc-email-frame">
+              <div class="pc-email-body template3-body">
+                <table class="pc-email-table" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="pc-email-container template3">
+                      <div class="pc-email-logo-layers">
+                        <img
+                          src="assets/pc-logo-color.svg"
+                          alt="Pampered Chef"
+                          style="height: 40px; width: auto"
+                        />
+                      </div>
+                      <div class="pc-email-card-layers">
+                        <h1 class="pc-email-title-questa">
+                          Welcome to Pampered Chef
+                        </h1>
+                        <p class="pc-email-text-layers">
+                          Please verify your email address using the code below
+                          to complete account setup.
+                        </p>
+                        <div class="pc-verification-code-layers">
+                          <span class="pc-verification-code-unified"
+                            >847291</span
+                          >
+                        </div>
+                        <p class="pc-email-timer">
+                          <svg
+                            class="pc-icon-base"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          >
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                          </svg>
+                          Code expires in
+                          <strong
+                            ><span class="countdown-timer" data-expiry="1800"
+                              >30</span
+                            >
+                            minutes</strong
+                          >
+                        </p>
+                        <p class="pc-email-text-muted-layers">
+                          If you didn't sign up for Pampered Chef, you can
+                          safely ignore this email.
+                        </p>
+                        <p class="pc-email-signoff-layers">
+                          Thanks,<br />
+                          <strong>Pampered Chef</strong>
+                        </p>
+                      </div>
+                      <div class="pc-benefits-section">
+                        <h3>Once verified, you'll have access to:</h3>
+                        <ul class="pc-benefits-list">
+                          <li>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Exclusive recipes and cooking tips
+                          </li>
+                          <li>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Special member discounts
+                          </li>
+                          <li>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Early access to new products
+                          </li>
+                        </ul>
+                        <h4
+                          style="
+                            margin-top: var(--pc-spacing-xl);
+                            margin-bottom: var(--pc-spacing-xs);
+                          "
+                        >
+                          Need help?
+                        </h4>
+                        <p
+                          style="
+                            font-size: 0.875rem;
+                            color: var(--pc-text-tertiary);
+                            margin-bottom: var(--pc-spacing-md);
+                          "
+                        >
+                          Our support team is here for you 24/7
+                        </p>
+                        <div class="pc-help-buttons">
+                          <a href="#" class="pc-btn pc-btn-secondary">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <path
+                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                              />
+                              <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            Email Support
+                          </a>
+                          <a href="#" class="pc-btn pc-btn-secondary">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <circle cx="12" cy="12" r="10" />
+                              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                              <line x1="12" y1="17" x2="12.01" y2="17" />
+                            </svg>
+                            FAQ
+                          </a>
+                        </div>
+                      </div>
+                      <div class="pc-email-footer-simple">
+                        <a href="#">Manage your notifications</a>
+                        <p
+                          style="
+                            font-size: 0.75rem;
+                            color: var(--pc-text-tertiary);
+                            margin-top: var(--pc-spacing-md);
+                          "
+                        >
+                          &copy; 2026 Pampered Chef, Ltd.
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-          // Remove active class from all links and sections
-          navLinks.forEach(l => l.classList.remove('active'));
-          sections.forEach(s => s.classList.remove('active'));
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".pc-nav-link");
+        const sections = document.querySelectorAll(".pc-template-section");
+        const playgroundDropdown =
+          document.getElementById("playgroundDropdown");
+        const dropdownItems = document.querySelectorAll(".pc-dropdown-item");
+        const playgroundPreviews = document.querySelectorAll(
+          ".pc-playground-preview",
+        );
+        const playgroundInfos = document.querySelectorAll(
+          ".pc-playground-info",
+        );
 
-          // Add active class to clicked link
-          this.classList.add('active');
+        // Main tab navigation
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
 
-          // Show corresponding section
-          const templateId = this.getAttribute('data-template');
-          document.getElementById(templateId).classList.add('active');
+            navLinks.forEach((l) => l.classList.remove("active"));
+            sections.forEach((s) => s.classList.remove("active"));
+
+            this.classList.add("active");
+
+            const templateId = this.getAttribute("data-template");
+            document.getElementById(templateId).classList.add("active");
+          });
         });
-      });
 
-      // Countdown timer functionality
-      function startCountdown() {
-        const timers = document.querySelectorAll('.countdown-timer');
-        
-        timers.forEach(timer => {
-          let timeLeft = parseInt(timer.getAttribute('data-expiry')); // seconds
-          
-          function updateTimer() {
-            const minutes = Math.floor(timeLeft / 60);
-            timer.textContent = minutes;
-            
-            if (timeLeft > 0) {
-              timeLeft--;
-              setTimeout(updateTimer, 1000);
-            }
+        // Playground dropdown toggle
+        const playgroundNavItem = document.querySelector(
+          ".pc-nav-item-dropdown",
+        );
+        const playgroundLink = playgroundNavItem.querySelector(".pc-nav-link");
+
+        playgroundNavItem.addEventListener("mouseenter", function () {
+          if (playgroundLink.classList.contains("active")) {
+            playgroundDropdown.classList.add("visible");
           }
-          
-          updateTimer();
         });
-      }
-      
-      startCountdown();
-    });
-  </script>
-</body>
+
+        playgroundNavItem.addEventListener("mouseleave", function () {
+          playgroundDropdown.classList.remove("visible");
+        });
+
+        // Also show dropdown on click when playground tab is already active
+        playgroundLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          // If playground is already active, toggle dropdown
+          if (this.classList.contains("active")) {
+            playgroundDropdown.classList.toggle("visible");
+          } else {
+            // Switch to playground tab
+            navLinks.forEach((l) => l.classList.remove("active"));
+            sections.forEach((s) => s.classList.remove("active"));
+            this.classList.add("active");
+            document.getElementById("playground").classList.add("active");
+            // Show dropdown briefly to indicate sub-options
+            playgroundDropdown.classList.add("visible");
+          }
+        });
+
+        // Dropdown item selection
+        dropdownItems.forEach((item) => {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const target = this.getAttribute("data-playground");
+
+            // Update dropdown active state
+            dropdownItems.forEach((di) => di.classList.remove("active"));
+            this.classList.add("active");
+
+            // Switch preview
+            playgroundPreviews.forEach((p) => p.classList.remove("active"));
+            document
+              .querySelector(`[data-playground-preview="${target}"]`)
+              .classList.add("active");
+
+            // Switch info panel
+            playgroundInfos.forEach((i) => i.classList.remove("active"));
+            document
+              .querySelector(`[data-playground-info="${target}"]`)
+              .classList.add("active");
+
+            // Close dropdown
+            playgroundDropdown.classList.remove("visible");
+          });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function (e) {
+          if (!playgroundNavItem.contains(e.target)) {
+            playgroundDropdown.classList.remove("visible");
+          }
+        });
+
+        // Countdown timer functionality
+        function startCountdown() {
+          const timers = document.querySelectorAll(".countdown-timer");
+
+          timers.forEach((timer) => {
+            let timeLeft = parseInt(timer.getAttribute("data-expiry"));
+
+            function updateTimer() {
+              const minutes = Math.floor(timeLeft / 60);
+              timer.textContent = minutes;
+
+              if (timeLeft > 0) {
+                timeLeft--;
+                setTimeout(updateTimer, 1000);
+              }
+            }
+
+            updateTimer();
+          });
+        }
+
+        startCountdown();
+      });
+    </script>
+  </body>
 </html>

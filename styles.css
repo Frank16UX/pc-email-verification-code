@@ -378,7 +378,7 @@ body {
   font-family: var(--pc-font-questa);
   font-size: 2rem;
   font-weight: 400;
-  color: #383A3B;
+  color: var(--pc-text-primary);
   margin-bottom: var(--pc-spacing-md);
   text-align: center;
   line-height: 2.375rem;
@@ -1094,5 +1094,248 @@ body {
   .pc-footer-nav-links {
     flex-direction: column;
     gap: var(--pc-spacing-sm);
+  }
+}
+
+/* ==========================================================================
+   Dropdown Navigation (Playground Templates)
+   ========================================================================== */
+
+.pc-nav-item-dropdown {
+  position: relative;
+}
+
+.pc-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding-top: var(--pc-spacing-xs);
+  min-width: 260px;
+  z-index: 200;
+}
+
+.pc-dropdown-menu {
+  background: var(--pc-surface-light);
+  border: 1px solid var(--pc-surface-border);
+  border-radius: var(--pc-radius-md);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  padding: var(--pc-spacing-xs);
+  overflow: hidden;
+}
+
+.pc-dropdown.visible {
+  display: block;
+}
+
+.pc-dropdown-item {
+  display: block;
+  padding: var(--pc-spacing-sm) var(--pc-spacing-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--pc-text-secondary);
+  text-decoration: none;
+  border-radius: var(--pc-radius-sm);
+  transition: all 0.15s ease;
+}
+
+.pc-dropdown-item:hover {
+  background-color: var(--pc-surface-tint);
+  color: var(--pc-color-primary);
+}
+
+.pc-dropdown-item.active {
+  background-color: var(--pc-surface-tint-2);
+  color: var(--pc-color-primary);
+}
+
+/* ==========================================================================
+   Playground Preview Containers
+   ========================================================================== */
+
+.pc-playground-preview {
+  display: none;
+}
+
+.pc-playground-preview.active {
+  display: flex;
+  justify-content: center;
+}
+
+.pc-playground-info {
+  display: none;
+}
+
+.pc-playground-info.active {
+  display: block;
+}
+
+/* ==========================================================================
+   Template Final Styles (Figma-matched)
+   ========================================================================== */
+
+.pc-email-container.template-final {
+  padding: 25px 0 0 0;
+  background: var(--pc-surface-light);
+}
+
+.pc-final-content {
+  padding: 0 50px;
+  text-align: center;
+}
+
+.pc-final-code-box {
+  background-color: var(--pc-surface-tint-2);
+  border-radius: var(--pc-radius-md);
+  padding: 25px;
+  margin-bottom: 22px;
+}
+
+.pc-final-code {
+  font-family: 'Inter', monospace;
+  font-size: 3.625rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--pc-color-primary);
+  line-height: 1.1;
+  display: block;
+}
+
+.pc-final-body {
+  font-size: 1rem;
+  color: var(--pc-text-secondary);
+  line-height: 1.35;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.pc-final-expiry {
+  margin-bottom: 22px;
+}
+
+/* Benefits Card */
+.pc-final-benefits {
+  border: 1px solid var(--pc-surface-border);
+  border-radius: var(--pc-radius-md);
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 22px;
+}
+
+.pc-final-benefits-heading {
+  font-size: 1rem;
+  color: var(--pc-text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.pc-final-benefits-list {
+  list-style: none;
+}
+
+.pc-final-benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 0;
+  font-size: 1rem;
+  color: var(--pc-text-secondary);
+  line-height: 1.35;
+}
+
+.pc-final-benefits-list svg {
+  width: 18px;
+  height: 18px;
+  color: var(--pc-color-success);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Help Blocks */
+.pc-final-help-block {
+  text-align: center;
+  padding: 16px 0;
+  border-top: 1px solid var(--pc-surface-border);
+}
+
+.pc-final-help-block h4 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--pc-text-primary);
+  margin-bottom: 4px;
+}
+
+.pc-final-help-block p {
+  font-size: 0.8125rem;
+  color: var(--pc-text-secondary);
+  line-height: 1.35;
+}
+
+.pc-final-help-block a {
+  color: #2c7a87;
+  text-decoration: underline;
+}
+
+/* Footer */
+.pc-final-footer {
+  background-color: var(--pc-surface-tint);
+  padding: 25px;
+  text-align: center;
+  margin-top: 22px;
+}
+
+.pc-final-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 16px;
+  margin-bottom: 12px;
+}
+
+.pc-final-footer-links a {
+  font-size: 0.9375rem;
+  color: var(--pc-text-primary);
+  text-decoration: none;
+  line-height: 1.9;
+}
+
+.pc-final-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.pc-final-footer-copyright {
+  font-size: 0.75rem;
+  color: #6d6d6e;
+  line-height: 1.2;
+}
+
+/* Template Final Responsive */
+@media (max-width: 640px) {
+  .pc-final-content {
+    padding: 0 20px;
+  }
+
+  .pc-final-code {
+    font-size: 2.8125rem;
+    letter-spacing: 0.15em;
+  }
+
+  .pc-final-code-box {
+    padding: 15px;
+  }
+
+  .pc-final-footer {
+    padding: 15px;
+  }
+
+  .pc-final-footer-links {
+    flex-direction: column;
+    gap: var(--pc-spacing-xs);
+  }
+
+  .pc-dropdown {
+    right: auto;
+    left: 0;
+    min-width: 220px;
   }
 }
